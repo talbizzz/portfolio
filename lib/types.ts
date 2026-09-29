@@ -36,6 +36,7 @@ export interface SkillCategory {
 export interface SiteConfig {
   name: string;
   tagline: string;
+  url: string;
   email: string;
   phone?: string;
   resumePath: string;
