@@ -16,6 +16,8 @@
 
 ## Milestone 2: 3D Core Mechanics — First Playable Node
 
+> ✅ Completed and verified in the browser: character select, WASD/arrow movement, orbit camera, and the Contact node's proximity-triggered overlay all work end-to-end locally.
+
 - [x] Set up R3F Canvas & /roadmap route
 - [x] Build character selection screen
 - [x] Implement desktop movement & camera controls
@@ -26,12 +28,14 @@
 
 ## Milestone 3: Full Roadmap — All Locations & Environments
 
-- [ ] Curate CC0 asset packs for 4 remaining locations
-- [ ] Build all 4 remaining distinct environments
-- [ ] Populate full node list with real content
-- [ ] Extend overlay to handle all content types
-- [ ] Compress all 3D assets
-- [ ] Full playtest of all 5 locations
+> ✅ Completed locally and verified in the browser (all 5 zones render distinctly). Scope adjustment: used procedural primitive geometry instead of downloaded CC0 packs (see note at top of Milestone-3 file) — no asset compression step was needed as a result. Still pending: verifying on the live aziztalbi.com deployment once this is merged from `dev` to `main`.
+
+- [x] ~~Curate CC0 asset packs for 4 remaining locations~~ (superseded — used procedural geometry instead)
+- [x] Build all 4 remaining distinct environments
+- [x] Populate full node list with real content
+- [x] Extend overlay to handle all content types
+- [x] ~~Compress all 3D assets~~ (not applicable — no downloaded assets)
+- [x] Full playtest of all 5 locations (local)
 
 ## Milestone 4: Mobile Detection & Touch Controls
 

@@ -1,5 +1,7 @@
 # Milestone 3: Full Roadmap — All Locations & Environments
 
+> ✅ **Completed**, with one scope adjustment made during execution: environments use procedural Three.js primitive geometry (boxes, cones, cylinders) with distinct colors per zone, rather than downloaded CC0 asset packs. This follows the same pragmatic call made in Milestone 2 (per Aziz: ship a working v1 now, do a real visual design pass later) — no asset compression pipeline was needed since nothing was downloaded. A future design pass may swap these primitives for real low-poly models.
+
 ## Goal
 
 Deliver the complete 3D career roadmap — all current milestones (education, both projects, current role, contact) represented as visually distinct, fully populated locations on the hub map.

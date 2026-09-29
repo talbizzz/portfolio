@@ -6,7 +6,8 @@ import { KeyboardControls, OrbitControls } from "@react-three/drei";
 import { Vector3 } from "three";
 import type { RoadmapNode } from "@/lib/types";
 import { Character } from "@/components/roadmap/Character";
-import { ContactEnvironment } from "@/components/roadmap/environments/ContactEnvironment";
+import { Ground } from "@/components/roadmap/Ground";
+import { ENVIRONMENTS } from "@/components/roadmap/environments";
 import { keyboardMap } from "@/components/roadmap/controls";
 import { useProximity } from "@/lib/useProximity";
 
@@ -35,15 +36,30 @@ export function RoadmapCanvas({
   nodes: RoadmapNode[];
   onActiveNodeChange: (node: RoadmapNode | null) => void;
 }) {
-  const characterPositionRef = useRef(new Vector3(0, 0, 6));
+  const characterPositionRef = useRef(new Vector3(0, 0, 0));
 
   return (
     <KeyboardControls map={keyboardMap}>
-      <Canvas shadows camera={{ position: [0, 6, 14], fov: 50 }}>
+      <Canvas shadows camera={{ position: [0, 14, 22], fov: 55 }}>
         <color attach="background" args={["#87ceeb"]} />
         <ambientLight intensity={0.6} />
-        <directionalLight position={[5, 8, 5]} intensity={1} castShadow />
-        <ContactEnvironment nodePosition={nodes[0]?.position ?? [0, 0, 0]} />
+        <directionalLight
+          position={[15, 20, 10]}
+          intensity={1}
+          castShadow
+          shadow-camera-left={-40}
+          shadow-camera-right={40}
+          shadow-camera-top={40}
+          shadow-camera-bottom={-40}
+          shadow-camera-far={80}
+        />
+        <Ground />
+        {nodes.map((node) => {
+          const Environment = ENVIRONMENTS[node.environment];
+          return Environment ? (
+            <Environment key={node.id} position={node.position} />
+          ) : null;
+        })}
         <Character positionRef={characterPositionRef} color={characterColor} />
         <ProximityWatcher
           characterPositionRef={characterPositionRef}
