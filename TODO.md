@@ -16,13 +16,13 @@
 
 ## Milestone 2: 3D Core Mechanics — First Playable Node
 
-- [ ] Set up R3F Canvas & /roadmap route
-- [ ] Build character selection screen
-- [ ] Implement desktop movement & camera controls
-- [ ] Build one prototype environment + node
-- [ ] Wire proximity detection & content overlay
-- [ ] Add persistent VersionToggle
-- [ ] Add WebGL-unsupported fallback
+- [x] Set up R3F Canvas & /roadmap route
+- [x] Build character selection screen
+- [x] Implement desktop movement & camera controls
+- [x] Build one prototype environment + node
+- [x] Wire proximity detection & content overlay
+- [x] Add persistent VersionToggle
+- [x] Add WebGL-unsupported fallback
 
 ## Milestone 3: Full Roadmap — All Locations & Environments
 
