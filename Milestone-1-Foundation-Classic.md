@@ -1,12 +1,14 @@
 # Milestone 1: Foundation, Content Layer & Classic Version (Live)
 
+> ✅ **Completed.** Live at aziztalbi.com. One correction discovered during deployment: Cloudflare's current "Workers & Pages" onboarding deploys via `wrangler deploy` reading a `wrangler.jsonc` config, not the older standalone Pages dashboard flow this section originally described. The repo includes `wrangler.jsonc` (assets directory `./out`) and `.nvmrc` (Node 20) for this. References to "Cloudflare Pages" below reflect the original plan; the actual product used is Cloudflare Workers with static assets.
+
 ## Goal
 
 Ship a fully live, deployed classic portfolio on the custom domain, backed by a reusable, typed content layer that the 3D version will read from in later milestones.
 
 ## Context
 
-This is the first milestone — nothing exists yet beyond the project plan. Build a single Next.js (App Router) + TypeScript + Tailwind CSS app from scratch, configured for full static export (`output: 'export'`), and deploy it to Cloudflare Pages using the domain already purchased through Cloudflare. All later milestones (the 3D roadmap experience) are built inside this same app and will consume the content layer (`content/*.ts`) established here — its shape must serve both the classic pages now and the 3D node overlays later, per the `RoadmapNode` type defined below. There is no backend, database, or auth anywhere in this project. Contact is `mailto:` + social links only — no contact form.
+This is the first milestone — nothing exists yet beyond the project plan. Build a single Next.js (App Router) + TypeScript + Tailwind CSS app from scratch, configured for full static export (`output: 'export'`), and deploy it to Cloudflare (Workers with static assets, via a `wrangler.jsonc` config through Cloudflare's unified Workers & Pages dashboard — not the older standalone Pages product) using the domain already purchased through Cloudflare. All later milestones (the 3D roadmap experience) are built inside this same app and will consume the content layer (`content/*.ts`) established here — its shape must serve both the classic pages now and the 3D node overlays later, per the `RoadmapNode` type defined below. There is no backend, database, or auth anywhere in this project. Contact is `mailto:` + social links only — no contact form.
 
 ## Scope
 

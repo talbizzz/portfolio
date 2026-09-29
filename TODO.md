@@ -2,14 +2,17 @@
 
 ## Milestone 1: Foundation, Content Layer & Classic Version (Live)
 
+> ✅ Completed. Classic site live at aziztalbi.com (Cloudflare Workers static assets, deployed from github.com/talbizzz/portfolio, auto-deploys on push to `main`). Mobile responsiveness accepted as good-enough for v1 per Aziz; a full design/accessibility pass is planned for Milestone 5.
+
 - [x] Scaffold Next.js + TypeScript + Tailwind project
 - [x] Configure static export (`next.config.ts`)
 - [x] Build shared content types (`lib/types.ts`)
 - [x] Build content data files with real content
 - [x] Build all classic pages with real content
 - [x] Add resume download & contact links
-- [ ] Deploy to Cloudflare Pages
-- [ ] Attach custom domain via Cloudflare Pages
+- [x] Push repo to GitHub (github.com/talbizzz/portfolio)
+- [x] Connect Cloudflare Pages to the GitHub repo
+- [x] Attach aziztalbi.com custom domain in Cloudflare
 
 ## Milestone 2: 3D Core Mechanics — First Playable Node
 

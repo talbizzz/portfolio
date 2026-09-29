@@ -6,7 +6,7 @@ Prove out the entire 3D interaction loop — character selection, movement, came
 
 ## Context
 
-Milestone 1 delivered a live classic site with a typed content layer (`lib/types.ts`, `content/*.ts`) and a working Cloudflare Pages deployment pipeline. This milestone adds the first version of the `/roadmap` route and its supporting R3F scene, plus the `VersionToggle` component connecting the two versions (not built in Milestone 1, since `/roadmap` didn't exist yet). Only **one** real milestone node needs to be playable end-to-end here — building out the remaining 4 locations with fully distinct environments is Milestone 3's job. This milestone is deliberately scoped small because React Three Fiber is new technology for the developer: the goal is a working, if visually minimal, proof of the mechanic, not final art.
+Milestone 1 delivered a live classic site with a typed content layer (`lib/types.ts`, `content/*.ts`) and a working Cloudflare deployment pipeline (Workers with static assets, auto-deploying from `github.com/talbizzz/portfolio` on push to `main`). This milestone adds the first version of the `/roadmap` route and its supporting R3F scene, plus the `VersionToggle` component connecting the two versions (not built in Milestone 1, since `/roadmap` didn't exist yet). Only **one** real milestone node needs to be playable end-to-end here — building out the remaining 4 locations with fully distinct environments is Milestone 3's job. This milestone is deliberately scoped small because React Three Fiber is new technology for the developer: the goal is a working, if visually minimal, proof of the mechanic, not final art.
 
 ## Scope
 
@@ -80,7 +80,7 @@ Not applicable — no network calls, fully client-side state.
 7. Build `NodeOverlay`, wired to `content/nodes.ts` and the relevant content file via `contentRef`.
 8. Swap placeholder geometry for a real free low-poly character model and basic environment dressing.
 9. Add the WebGL-unsupported fallback check at the top of `app/roadmap/page.tsx`.
-10. Add `VersionToggle` to both `RootLayout` and the roadmap page; deploy and verify the full loop works on the live Cloudflare Pages URL, not just locally.
+10. Add `VersionToggle` to both `RootLayout` and the roadmap page; deploy and verify the full loop works on the live aziztalbi.com deployment, not just locally.
 
 ## Done Criteria
 
@@ -90,7 +90,7 @@ Not applicable — no network calls, fully client-side state.
 - [ ] Overlay can be dismissed and exploration resumes.
 - [ ] `VersionToggle` is visible and functional on both `/` and `/roadmap`, in both directions.
 - [ ] A browser/device with no WebGL support sees a graceful message and a working link back to classic, not a crash or blank screen.
-- [ ] Verified working on the live Cloudflare Pages deployment, not just local dev.
+- [ ] Verified working on the live aziztalbi.com deployment, not just local dev.
 
 ## Known Risks & Watch-Outs
 

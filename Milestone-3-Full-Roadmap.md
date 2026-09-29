@@ -74,7 +74,7 @@ No new environment variables. If an asset optimization CLI (e.g. `gltf-transform
 - [ ] Each node's overlay shows correct, real content matching its type.
 - [ ] `content/nodes.ts` contains exactly 5 well-formed `RoadmapNode` entries.
 - [ ] All new 3D assets have been run through the compression pipeline.
-- [ ] Full playtest completed on the live Cloudflare Pages deployment.
+- [ ] Full playtest completed on the live aziztalbi.com deployment.
 
 ## Known Risks & Watch-Outs
 

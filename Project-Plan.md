@@ -11,7 +11,7 @@
 - **3D assets: free/CC0 low-poly packs** (e.g., Kenney.nl, Quaternius), compressed via Draco/gltf-transform — visual distinctiveness per location comes from arrangement, lighting, and color treatment rather than custom-modeled art.
 - **No backend, database, or auth** — all content (projects, experience, education, roadmap nodes) lives in versioned TypeScript data files in the repo. Adding future content is a data-file edit, not a CMS operation.
 - **Contact: plain `mailto:` + social links** — no contact form, no email-sending service, no serverless functions.
-- **Hosting: Cloudflare Pages**, using the domain already purchased through Cloudflare — domain and hosting live in one dashboard, with Cloudflare's CDN serving the 3D version's asset payloads globally.
+- **Hosting: Cloudflare** (Workers with static assets, deployed via `wrangler.jsonc` through Cloudflare's unified Workers & Pages dashboard — not the older standalone Pages product), using the domain already purchased through Cloudflare. Domain and hosting live in one dashboard, with Cloudflare's CDN serving the 3D version's asset payloads globally.
 
 ### Repository Structure
 
@@ -59,7 +59,7 @@ Fully static architecture — no server runs at request time. `content/*.ts` is 
 
 Inside the 3D experience, the Canvas renders the hub map and character controller; reaching a node's position triggers a DOM-based `NodeOverlay` (not 3D-rendered UI), keeping content legible and accessible. A persistent `VersionToggle` is a plain client-side link between `/` and `/roadmap` — no shared state needed.
 
-No backend, API, background jobs, or real-time layer. Content updates are edit → commit → push → Cloudflare Pages auto-rebuild.
+No backend, API, background jobs, or real-time layer. Content updates are edit → commit → push → Cloudflare auto-rebuild and redeploy (via the connected GitHub repo, github.com/talbizzz/portfolio).
 
 **Device handling:** WebGL capability is checked first (hard fallback to classic if unsupported, no opt-in possible). Mobile/coarse-pointer devices get a **smart default to classic** with a non-blocking **opt-in** to try the 3D version. On opt-in, mobile uses **tap-to-move** (tap the ground or a node to walk there) with an **auto-follow camera** — no virtual joystick or manual touch-camera controls, since the hub map's discrete-destination shape fits point-and-click navigation naturally and this keeps mobile input scope small.
 
@@ -86,7 +86,7 @@ No backend, API, background jobs, or real-time layer. Content updates are edit �
 
 - **R3F learning curve** — mitigated by Milestone 2 deliberately scoping down to one node before Milestone 3 scales to full content.
 - **Asset variety from free packs** — finding genuinely distinct-looking CC0 packs for 5 locations may take real curation time; budget for it in Milestone 3.
-- **Cloudflare Pages + Next.js static export compatibility** — should work out of the box, but verify with a real deploy early (Milestone 1), not late.
+- ~~**Cloudflare Pages + Next.js static export compatibility**~~ — resolved in Milestone 1: deployed successfully as Cloudflare Workers with static assets via `wrangler.jsonc` (Cloudflare's current onboarding flow uses this instead of the older standalone Pages product).
 - **Tap-to-move pathing** — keep movement simple (straight-line or basic obstacle avoidance); real pathfinding/nav-mesh tooling is scope creep for a portfolio site.
 - **Asset payload/performance** — compression needs to be an ongoing discipline across Milestones 2–3, not a one-time fix in Milestone 5.
 - **Content readiness** — final copy/project write-ups/resume must be finalized in parallel with development; could block Milestone 1's done criteria if copy isn't ready.
