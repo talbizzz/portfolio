@@ -16,26 +16,25 @@
 
 ## Milestone 2: 3D Core Mechanics — First Playable Node
 
-> ✅ Completed and verified in the browser: character select, WASD/arrow movement, orbit camera, and the Contact node's proximity-triggered overlay all work end-to-end locally.
+> ⚠️ Reverted 2026-10-01 — mechanic worked, visuals didn't clear the bar. All 3D code removed from the repo (recoverable from `dev` branch git history). See the note at the top of Milestone-2-3D-Core-Mechanics.md. To be redone from scratch.
 
-- [x] Set up R3F Canvas & /roadmap route
-- [x] Build character selection screen
-- [x] Implement desktop movement & camera controls
-- [x] Build one prototype environment + node
-- [x] Wire proximity detection & content overlay
-- [x] Add persistent VersionToggle
-- [x] Add WebGL-unsupported fallback
+- [ ] Set up R3F Canvas & /roadmap route
+- [ ] Build character selection screen
+- [ ] Implement desktop movement & camera controls
+- [ ] Build one prototype environment + node
+- [ ] Wire proximity detection & content overlay
+- [ ] Add persistent VersionToggle
+- [ ] Add WebGL-unsupported fallback
 
 ## Milestone 3: Full Roadmap — All Locations & Environments
 
-> ✅ Completed locally and verified in the browser (all 5 zones render distinctly). Scope adjustment: used procedural primitive geometry instead of downloaded CC0 packs (see note at top of Milestone-3 file) — no asset compression step was needed as a result. Still pending: verifying on the live aziztalbi.com deployment once this is merged from `dev` to `main`.
+> ⚠️ Reverted 2026-10-01 along with Milestone 2 — see the note at the top of Milestone-3-Full-Roadmap.md. `content/nodes.ts` is back to an empty array. To be redone from scratch.
 
-- [x] ~~Curate CC0 asset packs for 4 remaining locations~~ (superseded — used procedural geometry instead)
-- [x] Build all 4 remaining distinct environments
-- [x] Populate full node list with real content
-- [x] Extend overlay to handle all content types
-- [x] ~~Compress all 3D assets~~ (not applicable — no downloaded assets)
-- [x] Full playtest of all 5 locations (local)
+- [ ] Curate real assets or decide on an art direction for 5 locations
+- [ ] Build all 5 distinct environments
+- [ ] Populate full node list with real content
+- [ ] Extend overlay to handle all content types
+- [ ] Full playtest of all 5 locations
 
 ## Milestone 4: Mobile Detection & Touch Controls
 

@@ -1,6 +1,6 @@
 # Milestone 3: Full Roadmap — All Locations & Environments
 
-> ✅ **Completed**, with one scope adjustment made during execution: environments use procedural Three.js primitive geometry (boxes, cones, cylinders) with distinct colors per zone, rather than downloaded CC0 asset packs. This follows the same pragmatic call made in Milestone 2 (per Aziz: ship a working v1 now, do a real visual design pass later) — no asset compression pipeline was needed since nothing was downloaded. A future design pass may swap these primitives for real low-poly models.
+> ⚠️ **Reverted (2026-10-01).** Built and functionally verified (all 5 locations reachable, correct content per node), first with procedural primitive geometry, then rebuilt with real CC0 Kenney assets (houses, trees, roads) sourced from OpenGameArt.org — but the visual result still didn't meet the bar Aziz wanted ("looks horrifying and really bad"). Per his direction, this was reverted along with Milestone 2; see that file's note for the full context. `content/nodes.ts` is back to an empty array. Whoever restarts this should treat it as a from-scratch visual design problem, not just a reuse of what's documented below — the data model (`RoadmapNode`, the environment-registry pattern mapping `node.environment` to a component) worked fine and is worth keeping; the art direction needs to be rethought.
 
 ## Goal
 

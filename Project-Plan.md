@@ -65,6 +65,8 @@ No backend, API, background jobs, or real-time layer. Content updates are edit �
 
 ## Milestones
 
+> **Status (2026-10-01):** Milestones 2 and 3 were built, verified, and then reverted — the interaction mechanic worked but the visual execution didn't meet the bar wanted for a job-search portfolio. All 3D code was removed from the repo; the site is classic-only for now. The architecture below still reflects the intended design for when that work restarts from scratch with a different visual approach. See the status notes at the top of `Milestone-2-3D-Core-Mechanics.md` and `Milestone-3-Full-Roadmap.md`.
+
 | # | Name | Goal | Depends On |
 |---|------|------|------------|
 | 1 | Foundation, Content Layer & Classic Version (Live) | Ship a fully live classic portfolio on the custom domain, backed by the shared typed content layer. | — |

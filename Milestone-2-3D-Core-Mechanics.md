@@ -1,5 +1,7 @@
 # Milestone 2: 3D Core Mechanics — First Playable Node
 
+> ⚠️ **Reverted (2026-10-01).** The mechanic itself worked (character select, movement, camera, proximity, overlay all functioned correctly, verified in-browser and in production), but the visual execution — placeholder capsule character, then a real CC0 character model, then a full procedural/real-asset "town" redesign in Milestone 3 — never reached a quality bar Aziz was satisfied with. Per his direction, all 3D code, the `/roadmap` route, the `VersionToggle`, and the R3F/drei/three dependencies were removed from the repo. The site is classic-only for now. This milestone will be redone from scratch with a different visual approach when that work restarts — the technical learnings below (R3F + Next.js static export patterns, `next/dynamic` + `ssr:false` boundary, keyboard controls, proximity detection, WebGL fallback) are still valid and worth reusing, even though the code itself is gone (recoverable from git history on the `dev` branch if needed).
+
 ## Goal
 
 Prove out the entire 3D interaction loop — character selection, movement, camera, node entry, content overlay — end-to-end for a single location, establishing the technical foundation the rest of the roadmap will scale on top of.
